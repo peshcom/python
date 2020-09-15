@@ -55,3 +55,9 @@ def my_simple_func_sum(a, b):
 	return c
 
 print(my_simple_func_sum(11, 2))
+
+print("-------- Разбор строки на символы --------")
+my_str = input("Введите строку: ")
+print("Вы ввели строку: " + my_str)
+for i in my_str:
+	print(i)
