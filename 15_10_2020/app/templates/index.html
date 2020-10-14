@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>{{brand}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<style>
+			body
+			{
+				padding: 0; 
+				background: url('/static/background.jpg') no-repeat;
+				background-size: cover; 
+				background-color: #58576a; 
+				background-blend-mode: multiply; 
+			}
+
+			.outer:before
+			{
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			/* добавим горизонтальное центрирование */
+			.outer
+			{
+				text-align: center;
+			}
+
+			.brand
+			{
+				display: inline-block;
+				vertical-align: middle;
+				color: #fff; 
+				font-family: 'Lobster', cursive; 
+				font-size: 48px; 
+			}
+
+			input.my_btn
+			{
+				font-weight: 700;
+				color: white;
+				text-decoration: none;
+				padding: .8em 1em calc(.8em + 3px);
+				border-radius: 7px;
+				background: #FDBE11;
+				border-color: #FDBE11;
+				transition: 0.2s;
+			} 
+			input.my_btn:hover
+			{
+				background: rgb(53, 167, 110);
+			}
+			
+			input.my_btn:active
+			{
+				background: rgb(33,147,90);
+				box-shadow: 0 3px rgb(33,147,90) inset;
+			}
+	</style>
+	</head>
+	<body>
+		<div class="outer" style="height:50%; width: 100%;">
+			<span class="brand">{{brand}}<br>название приложения</span>
+			<form method="GET" action="/processing">
+				<input type="text" name="param" placeholder="сюда текст">
+				<br>
+				<br>
+				<input type="submit" name="" class="my_btn" value="Отправить" >
+			</form>
+		</div>
+	</body>
+</html>
